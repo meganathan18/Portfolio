@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meganathan M | Java Developer & Full Stack Developer Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional portfolio of Meganathan M, a passionate Computer Science Engineering student specializing in Java, DSA, and Full Stack Development. Discover projects, skills, and certifications.">
+    <meta name="keywords" content="Meganathan M, Portfolio, Java Developer, Full Stack Developer, Computer Science Engineer, Hindusthan Institute of Technology, Spring Boot, React.js">
+    <meta name="author" content="Meganathan M">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Meganathan M | Java & Full Stack Developer">
+    <meta property="og:description" content="Portfolio of Meganathan M, specializing in Java, DSA, and Full Stack Development. Discover projects like Smart Grievance Management and URL Shortener.">
+    <meta property="og:image" content="assets/grievance_dashboard.png">
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-m">M</span>eganathan<span class="dot">.</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                
+                <!-- Mobile Hamburger Menu Icon -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">
+                        <i class="fa-solid fa-graduation-cap"></i> CSE Student
+                    </div>
+                    <h1 class="hero-title">Hi, I'm <span class="highlight">Meganathan M</span></h1>
+                    <h2 class="hero-subtitle">
+                        I am a <span class="typing-text" id="typing-text"></span><span class="typed-cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        "Passionate Computer Science Engineering student specializing in Java, Data Structures & Algorithms, and Full Stack Development, dedicated to building scalable software solutions."
+                    </p>
+                    
+                    <div class="hero-meta">
+                        <div class="meta-item">
+                            <i class="fa-solid fa-location-dot"></i> Hosur, Tamil Nadu, India
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-envelope"></i> meganathanm1804@gmail.com
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="assets/resume.pdf" class="btn btn-primary" download="Meganathan_M_Resume.pdf">
+                            <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-solid fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/meganathan-m-b71b352a3" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span class="tooltip">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/meganathan18" target="_blank" rel="noopener" class="social-link" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="tooltip">GitHub</span>
+                        </a>
+                        <a href="https://leetcode.com/u/Meganathan18/" target="_blank" rel="noopener" class="social-link" aria-label="LeetCode Profile">
+                            <i class="fa-solid fa-code"></i>
+                            <span class="tooltip">LeetCode</span>
+                        </a>
+                        <a href="mailto:meganathanm1804@gmail.com" class="social-link" aria-label="Email Address">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="tooltip">Email</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-glowing-circle"></div>
+                    <div class="visual-card glass-card">
+                        <div class="card-dots">
+                            <span class="card-dot red"></span>
+                            <span class="card-dot yellow"></span>
+                            <span class="card-dot green"></span>
+                        </div>
+                        <div class="visual-code">
+<pre><code><span class="code-keyword">public class</span> <span class="code-class">Developer</span> {
+  <span class="code-keyword">private</span> String name = <span class="code-string">"Meganathan M"</span>;
+  <span class="code-keyword">private</span> String[] skills = {
+    <span class="code-string">"Java"</span>, <span class="code-string">"DSA"</span>, <span class="code-string">"FullStack"</span>
+  };
+  
+  <span class="code-keyword">public void</span> <span class="code-method">build</span>() {
+    System.out.println(<span class="code-string">"Building solutions..."</span>);
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down" aria-label="Scroll down to About section">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Get To Know Me</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-info glass-card">
+                        <h3>My Background</h3>
+                        <p class="about-paragraph">
+                            I am a Computer Science Engineering student with a strong passion for technology, software development, and analytical problem-solving. I thrive on tackling challenges and transforming complex ideas into functional, clean, and efficient applications.
+                        </p>
+                        <p class="about-paragraph">
+                            My core academic foundation lies in:
+                        </p>
+                        <ul class="about-highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> Java & Object-Oriented Programming</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Data Structures and Algorithms</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Full Stack Web Development</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Relational & NoSQL Databases</li>
+                        </ul>
+                        <p class="about-paragraph">
+                            I enjoy solving coding problems, learning new technologies, and building real-world applications that solve actual user pain points.
+                        </p>
+                    </div>
+
+                    <!-- Education Card inside About -->
+                    <div class="education-card glass-card">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <div class="timeline-content">
+                                    <span class="duration">2023 - 2027</span>
+                                    <h4 class="school">Hindusthan Institute of Technology</h4>
+                                    <p class="location">Coimbatore, Tamil Nadu, India</p>
+                                    <p class="degree">B.E. Computer Science and Engineering</p>
+                                    <div class="gpa-tag">
+                                        <span class="gpa-label">CGPA:</span>
+                                        <span class="gpa-value">8.23</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">My Expertise</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-code-bracket"></i>
+                            <h4>Languages</h4>
+                        </div>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-info"><span>Java</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 90%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>JavaScript</span><span>80%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 80%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>Python</span><span>75%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 75%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Core Subjects -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-book"></i>
+                            <h4>Core Subjects</h4>
+                        </div>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-info"><span>Data Structures & Algorithms</span><span>85%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 85%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>Object-Oriented Programming (OOP)</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 90%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>Database Management System (DBMS)</span><span>80%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 80%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h4>Frontend</h4>
+                        </div>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-info"><span>HTML & CSS</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 90%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>Bootstrap</span><span>85%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 85%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>React.js</span><span>80%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 80%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-server"></i>
+                            <h4>Backend</h4>
+                        </div>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-info"><span>Node.js & Express.js</span><span>80%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 80%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>Spring Boot</span><span>75%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 75%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-database"></i>
+                            <h4>Databases</h4>
+                        </div>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-info"><span>MySQL</span><span>80%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 80%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>MongoDB</span><span>75%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 75%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-header">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <h4>Tools & Utilities</h4>
+                        </div>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-info"><span>Git & GitHub</span><span>85%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 85%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>VS Code</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="skill-progress-bar" style="width: 90%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">My Creative Works</span>
+                    <h2 class="section-title">Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Project Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="js-fullstack">React & Node</button>
+                    <button class="filter-btn" data-filter="java-spring">Java & Spring Boot</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1: Smart Grievance Management System -->
+                    <div class="project-card glass-card" data-category="js-fullstack">
+                        <!-- Screenshots Carousel -->
+                        <div class="carousel-container">
+                            <div class="carousel-slides" id="grievance-slides">
+                                <div class="carousel-slide active">
+                                    <img src="assets/grievance_dashboard.png" alt="Smart Grievance Dashboard Screen">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="assets/grievance_map.png" alt="Smart Grievance Geotagged Map Screen">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="assets/grievance_tracking.png" alt="Smart Grievance Status Timeline Screen">
+                                </div>
+                            </div>
+                            <button class="carousel-btn prev-btn" id="prev-grievance" aria-label="Previous Screenshot">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </button>
+                            <button class="carousel-btn next-btn" id="next-grievance" aria-label="Next Screenshot">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                            <div class="carousel-indicators" id="grievance-indicators">
+                                <span class="indicator active" data-slide="0"></span>
+                                <span class="indicator" data-slide="1"></span>
+                                <span class="indicator" data-slide="2"></span>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <h3 class="project-name">Smart Grievance Management System</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <p class="project-desc">
+                                A comprehensive complaint registration and tracking portal designed to bridge the communication gap between citizens and authorities.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-caret-right"></i> Secure REST API backend with JSON Web Tokens.</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Geotagged image uploads to verify incident locations.</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Real-time, step-by-step complaint status tracking.</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Responsive authority and user action dashboards.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                <a href="https://github.com/meganathan18" target="_blank" rel="noopener" class="btn btn-sm btn-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: URL Shortener Application -->
+                    <div class="project-card glass-card" data-category="java-spring">
+                        <div class="project-img-wrapper">
+                            <img src="assets/url_shortener.png" alt="URL Shortener Application UI" class="project-card-img">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">URL Shortener Application</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <p class="project-desc">
+                                An efficient backend-heavy service designed to translate long, cumbersome URLs into compact, shareable short aliases with built-in access analytics.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-caret-right"></i> Custom base-62 compression encoding logic.</li>
+                                <li><i class="fa-solid fa-caret-right"></i> O(1) redirection lookup using database indexes.</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Dynamic click volume analytics and charts.</li>
+                            </ul>
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-primary" id="open-shortener-details">
+                                    <i class="fa-solid fa-circle-info"></i> Project Details
+                                </button>
+                                <a href="https://github.com/meganathan18" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Certifications Section -->
+        <section id="experience" class="exp-cert-section section-padding">
+            <div class="container">
+                <div class="exp-cert-grid">
+                    <!-- Internship Timeline -->
+                    <div class="exp-column">
+                        <div class="section-header">
+                            <span class="section-subtitle">Career Foundation</span>
+                            <h2 class="section-title">Internships</h2>
+                            <div class="section-line left"></div>
+                        </div>
+
+                        <div class="timeline-complex">
+                            <div class="timeline-card glass-card">
+                                <div class="timeline-header">
+                                    <div class="company-logo-bg">
+                                        <i class="fa-brands fa-python"></i>
+                                    </div>
+                                    <div class="timeline-title-details">
+                                        <h4>Python for Data Science Intern</h4>
+                                        <h5>Appin Technology</h5>
+                                        <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> Coimbatore, TN (Remote/Hybrid)</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-body">
+                                    <ul class="resp-list">
+                                        <li><i class="fa-solid fa-minus"></i> Cleansed raw datasets, handling missing values and outlier anomalies utilizing NumPy and Pandas libraries.</li>
+                                        <li><i class="fa-solid fa-minus"></i> Conducted Exploratory Data Analysis (EDA) to locate key correlations and visual data trends.</li>
+                                        <li><i class="fa-solid fa-minus"></i> Developed rich graphical dashboards and data visualizations with Matplotlib.</li>
+                                        <li><i class="fa-solid fa-minus"></i> Built statistical analysis mini-projects forecasting trends.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Column -->
+                    <div class="cert-column">
+                        <div class="section-header">
+                            <span class="section-subtitle">Validated Skills</span>
+                            <h2 class="section-title">Certifications</h2>
+                            <div class="section-line left"></div>
+                        </div>
+
+                        <div class="certifications-grid">
+                            <!-- Cert 1 -->
+                            <div class="cert-card glass-card">
+                                <div class="cert-icon-box">
+                                    <i class="fa-brands fa-java"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <h4>Programming in Java</h4>
+                                    <p>NPTEL Certification</p>
+                                </div>
+                            </div>
+                            <!-- Cert 2 -->
+                            <div class="cert-card glass-card">
+                                <div class="cert-icon-box">
+                                    <i class="fa-solid fa-cubes"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <h4>Full Stack Development Course</h4>
+                                    <p>Novitech</p>
+                                </div>
+                            </div>
+                            <!-- Cert 3 -->
+                            <div class="cert-card glass-card">
+                                <div class="cert-icon-box">
+                                    <i class="fa-brands fa-js"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <h4>JavaScript Certification</h4>
+                                    <p>Infosys Springboard</p>
+                                </div>
+                            </div>
+                            <!-- Cert 4 -->
+                            <div class="cert-card glass-card">
+                                <div class="cert-icon-box">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <h4>Python for Data Science</h4>
+                                    <p>NPTEL Certification</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Track Record</span>
+                    <h2 class="section-title">Achievements</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="achievements-grid">
+                    <!-- Card 1 -->
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="counter-number" data-target="110">0</div>
+                        <div class="counter-plus">+</div>
+                        <h4 class="achievement-title">DSA Coding Problems Solved</h4>
+                        <p class="achievement-desc">Successfully resolved algorithmic problems on platforms like LeetCode utilizing Java.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="counter-number" data-target="100">0</div>
+                        <div class="counter-plus">%</div>
+                        <h4 class="achievement-title">Problem Solving Focus</h4>
+                        <p class="achievement-desc">Deep conceptual mastery over Data Structures, Complexity Analysis, and OOP fundamentals.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <div class="counter-number" data-target="365">0</div>
+                        <div class="counter-plus">+</div>
+                        <h4 class="achievement-title">Active Learning Days</h4>
+                        <p class="achievement-desc">Consistently learning and building web systems and coding solutions day in and day out.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards info -->
+                    <div class="contact-info-panel">
+                        <div class="contact-item-card glass-card">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:meganathanm1804@gmail.com">meganathanm1804@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item-card glass-card">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/meganathan-m-b71b352a3" target="_blank" rel="noopener">linkedin.com/in/meganathan-m-b71b352a3</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item-card glass-card">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/meganathan18" target="_blank" rel="noopener">github.com/meganathan18</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item-card glass-card">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Hosur, Tamil Nadu, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel glass-card">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email"><i class="fa-solid fa-envelope"></i> Your Email</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" required rows="5" placeholder=" "></textarea>
+                                <label for="message"><i class="fa-solid fa-comment"></i> Your Message</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                                <span><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                            </button>
+                        </form>
+                        
+                        <!-- Success Message Toast/Overlay -->
+                        <div class="form-success-overlay" id="form-success-overlay">
+                            <div class="success-message-box">
+                                <i class="fa-solid fa-circle-check success-icon"></i>
+                                <h3>Thank you!</h3>
+                                <p>Your message has been sent successfully. I will get back to you shortly.</p>
+                                <button class="btn btn-sm btn-primary" id="close-success-btn">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- URL Shortener Detail Modal -->
+    <div class="modal-overlay" id="shortener-modal">
+        <div class="modal-card glass-card">
+            <button class="modal-close-btn" id="close-shortener-modal" aria-label="Close details popup">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-badge">Project Highlight</span>
+                    <h2>URL Shortener Application</h2>
+                    <p class="modal-stack"><i class="fa-solid fa-cubes"></i> Java | Spring Boot | MySQL</p>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="modal-img-container">
+                        <img src="assets/url_shortener.png" alt="URL Shortener UI Mockup">
+                    </div>
+                    
+                    <div class="modal-details-grid">
+                        <div class="modal-info-block">
+                            <h3><i class="fa-solid fa-circle-info"></i> Project Overview</h3>
+                            <p>
+                                The URL Shortener Application is a high-performance RESTful microservice built to optimize internet address sharing. By converting bulky HTTP links into short 6-letter aliases, it enables cleaner distribution on social feeds, emails, and SMS.
+                            </p>
+                        </div>
+                        <div class="modal-info-block">
+                            <h3><i class="fa-solid fa-gears"></i> Core Architectural Features</h3>
+                            <ul class="features-detailed-list">
+                                <li>
+                                    <strong>Base-62 Collision-Free Encoding:</strong> 
+                                    Utilizes a custom conversion scheme to translate incremental database IDs into standard 62-character values (a-z, A-Z, 0-9) to produce compact short codes.
+                                </li>
+                                <li>
+                                    <strong>Index-Optimized Lookup:</strong> 
+                                    Integrates structured index layers in the MySQL database to achieve O(1) time complexity for redirection requests.
+                                </li>
+                                <li>
+                                    <strong>Analytics Instrumentation:</strong> 
+                                    Leverages interceptors to log redirect request headers, capturing details like operating systems, browser agents, geolocation logs, and temporal click counts.
+                                </li>
+                                <li>
+                                    <strong>Redirection Stats Dashboard:</strong> 
+                                    Exposes dedicated API endpoints to compute analytics summaries and render click tracking metrics in real-time.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <a href="https://github.com/meganathan18" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <i class="fa-brands fa-github"></i> Explore GitHub Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-m">M</span>eganathan<span class="dot">.</span>
+                </a>
+                <p>Java Developer & Full Stack Developer</p>
+            </div>
+            
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/meganathan-m-b71b352a3" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/meganathan18" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://leetcode.com/u/Meganathan18/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+                <a href="mailto:meganathanm1804@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Meganathan M. All rights reserved. Designed with ❤️ using modern glassmorphism.</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript File -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
